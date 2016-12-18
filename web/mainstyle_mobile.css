@@ -1,0 +1,133 @@
+/* Copyright (C) 2013-2016  Stephan Kreutzer
+ *
+ * This file is part of message system for refugee-it.de.
+ *
+ * message system for refugee-it.de is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License version 3 or any later version,
+ * as published by the Free Software Foundation.
+ *
+ * message system for refugee-it.de is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License 3 for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License 3
+ * along with message system for refugee-it.de. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+
+body
+{
+    font-family: sans-serif;
+    background-color: #FFE9C5;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainbox
+{
+    border-style: solid;
+    border-width: 0px;
+
+    padding: 5px;
+}
+
+.mainbox_rtl
+{
+    direction:rtl;
+    clear: right;
+
+    border-style: solid;
+    border-width: 0px;
+
+    padding: 5px;
+}
+
+.mainbox_header
+{
+    background-color: #FFE9C5;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFE9C5;
+}
+
+.mainbox_header_h1
+{
+    color: #000000;
+    text-align: center;
+}
+
+.mainbox_body
+{
+    background-color: #FFFFFF;
+    text-align: justify;
+}
+
+.footerbox
+{
+    padding: 5px;
+
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.footerbox_link
+{
+    color: #000000;
+}
+
+.license
+{
+    font-family: monospace;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.success
+{
+    color: green;
+}
+
+.error
+{
+    color: red;
+}
+
+.table
+{
+    display: table;
+}
+
+.tr
+{
+    display: table-row;
+}
+
+.thead
+{
+    display: table-header-group;
+}
+
+.tbody
+{
+     display: table-row-group;
+}
+
+.tfoot
+{
+    display: table-footer-group;
+}
+
+.th
+{
+    display: table-cell;
+    font-weight: bold;
+}
+
+.td
+{
+    display: table-cell;
+}
+
