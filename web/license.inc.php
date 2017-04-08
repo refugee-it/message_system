@@ -1,5 +1,5 @@
 <?php
-/* Copyright (C) 2013-2016  Stephan Kreutzer
+/* Copyright (C) 2013-2017  Stephan Kreutzer
  *
  * This file is part of message system for refugee-it.de.
  *
@@ -29,7 +29,7 @@
 function getHTMLLicenseNotification($cssClassLicensenotification = "licensenotification")
 {
     return "<p class=\"".$cssClassLicensenotification."\">\n".
-           "  message system for refugee-it.de (C) 2012-2016  Stephan Kreutzer, Christian Huke<br/>\n".
+           "  message system for refugee-it.de (C) 2012-2017  Stephan Kreutzer, Christian Huke<br/>\n".
            "  <br/>\n".
            "  message system for refugee-it.de is free software: you can redistribute it and/or modify\n".
            "  it under the terms of the GNU Affero General Public License version 3 or any later version,\n".
