@@ -1,5 +1,5 @@
 <?php
-/* Copyright (C) 2012-2016  Stephan Kreutzer
+/* Copyright (C) 2012-2017  Stephan Kreutzer
  *
  * This file is part of message system for refugee-it.de.
  *
@@ -53,6 +53,17 @@ if (isset($_POST['logout']) === true &&
         {
             setcookie(session_name(), '', time()-42000, '/');
         }
+    }
+}
+
+$isLoggedIn = false;
+
+if (isset($_SESSION['user_id']) === true &&
+    isset($_SESSION['instance_path']) === true)
+{
+    if (dirname(__FILE__) === $_SESSION['instance_path'])
+    {
+        $isLoggedIn = true;
     }
 }
 
@@ -131,7 +142,7 @@ if (isset($_POST['name']) !== true ||
     {
         require_once("./libraries/user_management.inc.php");
 
-        if (isset($_SESSION['user_id']) === true)
+        if (isset($isLoggedIn)
         {
             echo "            <a href=\"messages.php\">".LANG_LINKCAPTION_MESSAGES."</a><br/>\n".
                  "            <a href=\"message_delete.php?cleartrash=true\">".LANG_LINKCAPTION_CLEARMESSAGETRASH."</a><br/>\n".
@@ -251,6 +262,21 @@ else
 
     if (is_array($user) === true)
     {
+        $language = null;
+
+        if (isset($_SESSION['language']) === true)
+        {
+            $language = $_SESSION['language'];
+        }
+
+        $_SESSION = array();
+
+        if ($language != null)
+        {
+            $_SESSION['language'] = $language;
+        }
+
+        $_SESSION['instance_path'] = dirname(__FILE__);
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $_POST['name'];
         $_SESSION['user_role'] = $user['role'];

@@ -1,5 +1,5 @@
 <?php
-/* Copyright (C) 2014-2016  Stephan Kreutzer
+/* Copyright (C) 2014-2017  Stephan Kreutzer
  *
  * This file is part of message system for refugee-it.de.
  *
@@ -25,15 +25,7 @@
 
 
 require_once("./libraries/https.inc.php");
-
-session_start();
-
-if (isset($_SESSION['user_id']) !== true)
-{
-    exit(-1);
-}
-
-
+require_once("./libraries/session.inc.php");
 
 require_once("./libraries/languagelib.inc.php");
 require_once(getLanguageFile("messages"));
