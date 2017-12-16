@@ -142,7 +142,7 @@ if (isset($_POST['name']) !== true ||
     {
         require_once("./libraries/user_management.inc.php");
 
-        if (isset($isLoggedIn)
+        if ($isLoggedIn === true)
         {
             echo "            <a href=\"messages.php\">".LANG_LINKCAPTION_MESSAGES."</a><br/>\n".
                  "            <a href=\"message_delete.php?cleartrash=true\">".LANG_LINKCAPTION_CLEARMESSAGETRASH."</a><br/>\n".
